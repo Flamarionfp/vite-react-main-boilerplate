@@ -1,11 +1,24 @@
-import { isEmpty } from 'radash';
-import useMediaQuery from 'beautiful-react-hooks/useMediaQuery';
-import { Main } from 'components/Main';
+import { Header, TechnologiesShowcase } from 'components';
 
 export const Home = () => {
-  const isSmall = useMediaQuery('(max-width: 48rem)');
-  console.log('isSmall', isSmall);
-  console.log('isEmpty', isEmpty('hello'));
-
-  return <Main />;
+  return (
+    <div className="bg-gradient-to-r from-sky-500 to-indigo-500 min-h-screen">
+      <Header />
+      <main className="flex flex-col items-center">
+        <header className="mt-40 mb-16">
+          <h2 className="text-white text-5xl font-extrabold">
+            The best boilerplate for you React Project!
+          </h2>
+        </header>
+        <div>
+          <TechnologiesShowcase />
+        </div>
+      </main>
+      <footer>
+        <p className="font-light text-white text-center text-sm mt-10">
+          By Flamarion Fagundes - 2022 ©
+        </p>
+      </footer>
+    </div>
+  );
 };
