@@ -5,6 +5,6 @@ describe('Testing the {{pascalCase name}} component', () => {
   it('should render correctly', () => {
     render(<{{pascalCase name}} />);
 
-    expect(screen.getByRole('div')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
   });
 });
